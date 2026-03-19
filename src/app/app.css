@@ -1,0 +1,110 @@
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5em;
+    /*  */
+    background-color: darkgrey;
+    height: fit-content;
+    padding: 20px;
+    /*  */
+}
+
+.filter-side-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /*  */
+    background-color: grey;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.filter-date {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    /*  */
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    /*  */
+}
+
+.filter-classes {
+    display: flex;
+    flex-direction: column;
+    /*  */
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    height: 300px;
+}
+
+.school-shedule-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    flex-grow: 1;
+    /*  */
+    background-color: grey;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.classes-per-year-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    /*  */
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    height: fit-content;
+    /*  */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /*  */
+}
+
+.year-st {
+    display: flex;
+    justify-content: center;
+    /*  */
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.shedule-cont {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    /*  */
+    background-color: white;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.shedule-per-class {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    /*  */
+    background-color: grey;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.class-letter-st {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.class-shedule-st {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
