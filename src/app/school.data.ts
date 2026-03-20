@@ -1,5 +1,5 @@
 import { SchoolIntrfc } from "./modules";
-export const schoolShedule: SchoolIntrfc[] = [
+export const schoolSheduleData: SchoolIntrfc[] = [
   {
     "date": "2026-03-17",
     "letterClass": "A",

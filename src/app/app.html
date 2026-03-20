@@ -2,24 +2,26 @@
     <div class="filter-side-bar-container">
         <div class="filter-date">
             <p class="text-center">
-                <label for="cus-dat"> <h5>Custom</h5></label><br>
-                <input type="date" name="custom-date" id="cus-dat">
-
+                <label for="cus-dat"> <h5>Custom</h5></label><br />
+                <input type="date" name="custom-date" id="cus-dat" />
             </p>
             <p>
-                <button type="button"><</button><button type="submit">Month</button>
-                <button type="button">></button>
+                <button type="button" (click)="onInDecrease('month', 'decrease')"><</button
+        ><button type="submit" (click)="onMonth()">Month</button>
+                <button type="button" (click)="onInDecrease('month', 'increase')">></button>
             </p>
             <p>
-                <button type="button"><</button><button type="submit">Week</button>
-                <button type="button">></button>
+                <button type="button" (click)="onInDecrease('week', 'decrease')"><</button
+        ><button type="submit" (click)="onWeek()">Week</button>
+                <button type="button" (click)="onInDecrease('week', 'increase')">></button>
             </p>
             <p>
-                <button type="button"><</button><button type="submit">Day</button>
-                <button type="button">></button>
+                <button type="button" (click)="onInDecrease('day', 'decrease')"><</button
+        ><button type="submit" (click)="onDay()">Day</button>
+                <button type="button" (click)="onInDecrease('day', 'increase')">></button>
             </p>
             <p>
-                <button type="submit">Today</button>
+                <button type="submit" (click)="onToday()">Today</button>
             </p>
         </div>
         <div class="filter-classes">
@@ -33,13 +35,12 @@
     </div>
     <div class="school-shedule-container">
         <div class="classes-per-year-cont">
-            <div class="year-st">
-                Year
-            </div>
+            <div class="year-st">Year</div>
             <div class="shedule-cont">
                 <div class="shedule-per-class">
                     <div class="class-letter-st">letter of class</div>
-                    <div class="class-shedule-st">class shedule:
+                    <div class="class-shedule-st">
+                        class shedule:
                         <ol>
                             <li></li>
                             <li></li>
@@ -50,7 +51,8 @@
                 </div>
                 <div class="shedule-per-class">
                     <div class="class-letter-st">letter of class</div>
-                    <div class="class-shedule-st">class shedule:
+                    <div class="class-shedule-st">
+                        class shedule:
                         <ol>
                             <li></li>
                             <li></li>
@@ -61,7 +63,8 @@
                 </div>
                 <div class="shedule-per-class">
                     <div class="class-letter-st">letter of class</div>
-                    <div class="class-shedule-st">class shedule:
+                    <div class="class-shedule-st">
+                        class shedule:
                         <ol>
                             <li></li>
                             <li></li>
