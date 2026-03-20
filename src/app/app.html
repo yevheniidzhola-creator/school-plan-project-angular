@@ -1,27 +1,34 @@
 <main>
     <div class="filter-side-bar-container">
         <div class="filter-date">
-            <p class="text-center">
-                <label for="cus-dat"> <h5>Custom</h5></label><br />
-                <input type="date" name="custom-date" id="cus-dat" />
+            <form>
+                <p class="text-center">
+                    <label for="date-since"> <h5 class="text-primary">Since:</h5></label><br />
+                    <input type="date" id="date-since" #sinceInpt />
+                </p>
+                <p class="text-center">
+                    <label for="date-to"> <h5 class="text-primary">To:</h5></label><br />
+                    <input type="date" id="date-to" #toInpt [min]="sinceInpt.value" (change)="onDatePicker(sinceInpt.value, toInpt.value)" />
+                </p>
+                <button type="reset" (click)="resetDatePicker()">Reset date</button>
+            </form>
+            <p>
+                <button type=" button " (click)="onInDecrease('month', 'decrease')">◀</button
+        ><button type="submit " (click)="onMonth()">Month</button>
+                <button type="button " (click)="onInDecrease('month', 'increase')">▶</button>
             </p>
             <p>
-                <button type="button" (click)="onInDecrease('month', 'decrease')"><</button
-        ><button type="submit" (click)="onMonth()">Month</button>
-                <button type="button" (click)="onInDecrease('month', 'increase')">></button>
+                <button type="button " (click)="onInDecrease('week', 'decrease')">◀</button
+        ><button type="submit " (click)="onWeek()">Week</button>
+                <button type="button " (click)="onInDecrease('week', 'increase')">▶</button>
             </p>
             <p>
-                <button type="button" (click)="onInDecrease('week', 'decrease')"><</button
-        ><button type="submit" (click)="onWeek()">Week</button>
-                <button type="button" (click)="onInDecrease('week', 'increase')">></button>
+                <button type="button " (click)="onInDecrease('day', 'decrease')">◀</button
+        ><button type="submit " (click)="onDay()">Day</button>
+                <button type="button " (click)="onInDecrease('day', 'increase')">▶</button>
             </p>
             <p>
-                <button type="button" (click)="onInDecrease('day', 'decrease')"><</button
-        ><button type="submit" (click)="onDay()">Day</button>
-                <button type="button" (click)="onInDecrease('day', 'increase')">></button>
-            </p>
-            <p>
-                <button type="submit" (click)="onToday()">Today</button>
+                <button type="submit " (click)="onToday()">Today</button>
             </p>
         </div>
         <div class="filter-classes">

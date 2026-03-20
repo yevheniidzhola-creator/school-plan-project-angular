@@ -20,6 +20,7 @@ export class App {
   schoolShedule = signal<SchoolIntrfc[]>(this.fullSchoolShedule);
   //- - - - - -
   currentDate = new Date();
+  //- - - - - -
 
   onMonth() {
     const now = new Date(this.currentDate);
@@ -97,5 +98,22 @@ export class App {
         break;
     }
     //this.currentDate trzeba przekazywac do 'F' onDAY/WEEK/MONTH do konstruktora 'Date(. . . )', alboż nei zajdzie zmiana
+  }
+  onDatePicker(sinceStr:string,toStr:string){
+    if(!sinceStr || !toStr) return;
+    //- - 
+    const startMs =Date.parse(sinceStr+'T00:00:00');
+    const endMs =Date.parse(toStr+'T23:59:59');
+    //- - 
+    if(startMs>endMs) return;
+    //- - - -
+    const filteredShedule=this.fullSchoolShedule.filter((tempvar)=>{
+      const dateMs=Date.parse(tempvar.date);
+      return dateMs >= startMs && dateMs <=endMs;
+    });
+    this.schoolShedule.set(filteredShedule);
+  }
+  resetDatePicker(){
+    this.schoolShedule.set(this.fullSchoolShedule);
   }
 }
