@@ -1,1 +1,31 @@
-<p>date-range-component works!</p>
+<div class="filter-date">
+    <form>
+        <p class="text-center">
+            <label for="date-since"> <h5 class="text-primary">Since:</h5></label><br />
+            <input type="date" id="date-since" #sinceInpt />
+        </p>
+        <p class="text-center">
+            <label for="date-to"> <h5 class="text-primary">To:</h5></label><br />
+            <input type="date" id="date-to" #toInpt [min]="sinceInpt.value" (change)="onClickDatePicker(sinceInpt.value, toInpt.value)" />
+        </p>
+        <button type="reset" (click)="onClickResetDatePicker()">Reset date</button>
+    </form>
+    <p>
+        <button type=" button " (click)="onClickInDecrease('month', 'decrease')">◀</button
+        ><button type="submit " (click)="onClickMonth()">Month</button>
+        <button type="button " (click)="onClickInDecrease('month', 'increase')">▶</button>
+    </p>
+    <p>
+        <button type="button " (click)="onClickInDecrease('week', 'decrease')">◀</button
+        ><button type="submit " (click)="onClickWeek()">Week</button>
+        <button type="button " (click)="onClickInDecrease('week', 'increase')">▶</button>
+    </p>
+    <p>
+        <button type="button " (click)="onClickInDecrease('day', 'decrease')">◀</button
+        ><button type="submit " (click)="onClickDay()">Day</button>
+        <button type="button " (click)="onClickInDecrease('day', 'increase')">▶</button>
+    </p>
+    <p>
+        <button type="submit " (click)="onClickToday()">Today</button>
+    </p>
+</div>
