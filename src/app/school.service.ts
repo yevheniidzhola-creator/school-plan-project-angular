@@ -3,10 +3,13 @@ import { schoolSheduleData } from './school.data';
 import { SchoolIntrfc } from './modules';
 // - - - -
 const dayMs = 86400000;
+// - - - -
 @Injectable({ providedIn: 'root' })
-export class Schoolservice {
-  private readonly fullSchoolShedule = schoolSheduleData;
-  schoolShedule = signal<SchoolIntrfc[]>(this.fullSchoolShedule);
+export class SchoolService {
+  constructor() { this.onToday(); }
+    private readonly fullSchoolShedule = schoolSheduleData;
+    schoolShedule = signal<SchoolIntrfc[]>(this.fullSchoolShedule);
+  //- - - - - -
   currentDate = new Date();
   //- - - - - -
   filterDateRange(startsMs: number, endMs: number) {

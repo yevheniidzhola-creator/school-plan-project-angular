@@ -1,1 +1,13 @@
-<p>class-shedule-component works!</p>
+<div class="shedule-per-class">
+    <div class="class-letter-st">{{dayShedule.letterClass}}</div>
+    <div class="class-shedule-st">
+        Class shedule:
+        <ol>
+            @for (sub of dayShedule.subjects; track $index) {
+            <li>
+                {{sub}}
+            </li>
+            }
+        </ol>
+    </div>
+</div>

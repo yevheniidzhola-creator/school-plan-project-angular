@@ -1,1 +1,10 @@
-<p>filter-class-component works!</p>
+<div class="filt-cl-comp">
+    <button type="button">YEAR - {{allYearsAtSchool}}</button>
+    <ul>
+        @for (class of allClassesYear; track class.idClass ) {
+        <li>
+            <button type="button">{{class.letterClass}}</button>
+        </li>
+        }
+    </ul>
+</div>

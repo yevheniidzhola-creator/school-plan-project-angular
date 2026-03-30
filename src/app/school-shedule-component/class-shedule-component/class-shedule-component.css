@@ -1,0 +1,22 @@
+.shedule-per-class {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    /*  */
+    background-color: grey;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.class-letter-st {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.class-shedule-st {
+    background-color: white;
+    padding: 8px;
+    border-radius: 8px;
+}

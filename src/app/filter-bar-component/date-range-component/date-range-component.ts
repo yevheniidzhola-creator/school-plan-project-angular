@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Schoolservice } from '../../school.service';
+import { SchoolService } from '../../school.service';
 
 
 @Component({
@@ -9,7 +9,7 @@ import { Schoolservice } from '../../school.service';
   styleUrl: './date-range-component.css',
 })
 export class DateRangeComponent {
-private schoolService=inject(Schoolservice);
+private schoolService=inject(SchoolService);
 onClickMonth(){
   this.schoolService.onMonth();
 };

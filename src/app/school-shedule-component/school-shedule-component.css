@@ -1,0 +1,50 @@
+.classes-per-year-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    /*  */
+    background-color: black;
+    padding: 15px;
+    border-radius: 15px;
+    height: fit-content;
+    /*  */
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    /*  */
+}
+
+.year-st {
+    display: flex;
+    justify-content: center;
+    /*  */
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.shedule-cont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    /*  */
+    background-color: white;
+    width: fit-content;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.shed-date {
+    display: flex;
+    justify-content: center;
+    /*  */
+    background-color: grey;
+    border-radius: 15px;
+}
+
+.shed-class {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: grey;
+    border-radius: 15px;
+}

@@ -1,1 +1,15 @@
-<p>school-shedule-component works!</p>
+<div class="classes-per-year-cont">
+    <div class="year-st">Year - {{years}}</div>
+    <div class="shedule-cont">
+        <div class="shed-date">
+            Date -{{classShedule()[0].date}}
+        </div>
+        <div class="shed-class">
+            @for (day of classShedule(); track classShedule()) {
+            <app-class-shedule [dayShedule]="day" /> }
+        </div>
+        <!-- <div class="shed-class">
+            123456
+        </div> -->
+    </div>
+</div>
